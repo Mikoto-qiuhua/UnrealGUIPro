@@ -1,0 +1,164 @@
+Gui:
+  #GUI類型(Inventory, Chest)
+  Type: 'Inventory'
+  #背景透明度(0~255)
+  Transparent: 0
+  #背景顏色
+  Color: 'ffffff'
+  #GUI圖片
+  Image: ''
+  #GUI寬度，設-1為根據圖片尺寸。
+  Width: 240
+  #GUI高度，設-1為根據圖片尺寸。
+  Height: 155
+  #GUI的X偏移
+  Position: 5
+  X: 0
+  #GUI的Y偏移
+  Y: 0
+
+#GUI上的物件
+ContentList:
+  #名稱
+  Title:
+    Type: 'Text'
+    Text:
+    - '自訂遊戲目錄'
+    TextSize: 2
+    TextColor: 'FFFFFF'
+    Position: 2
+    X: 0
+    Y: -20
+  #繼續遊戲
+  Button1:
+    Type: Button
+    Image: 'gui/button/button2_off.png'
+    HoverImage: 'gui/button/button2_on.png'
+    ClickImage: 'gui/button/button2_on.png'
+    Width: 60
+    Height: 15
+    Text: '繼續遊戲'
+    TextColor: '6821a9'
+    TextSize: 1
+    Close: true
+    Position: 1
+    X: 0
+    Y: 10
+  #進度
+  Button2:
+    Type: Button
+    Image: 'gui/button/button2_off.png'
+    HoverImage: 'gui/button/button2_on.png'
+    ClickImage: 'gui/button/button2_on.png'
+    Width: 60
+    Height: 15
+    Text: '進度'
+    TextColor: 'ffa500'
+    TextSize: 1
+    ToGUI: 'System_Advancements'
+    Close: false
+    Position: 1
+    X: 20
+    Y: 30
+  #統計
+  Button3:
+    Type: Button
+    Image: 'gui/button/button2_off.png'
+    HoverImage: 'gui/button/button2_on.png'
+    ClickImage: 'gui/button/button2_on.png'
+    Width: 60
+    Height: 15
+    Text: '統計'
+    TextColor: 'd2691e'
+    TextSize: 1
+    ToGUI: 'System_Stats'
+    Close: false
+    Position: 1
+    X: 0
+    Y: 50
+  #提供意見回饋
+  Button4:
+    Type: Button
+    Image: 'gui/button/button2_off.png'
+    HoverImage: 'gui/button/button2_on.png'
+    ClickImage: 'gui/button/button2_on.png'
+    Width: 60
+    Height: 15
+    Text: '提供意見回饋'
+    TextColor: '483d8b'
+    TextSize: 1
+    ToGUI: 'System_GiveOpinions'
+    Close: false
+    Position: 1
+    X: 20
+    Y: 70
+  #回報錯誤
+  Button5:
+    Type: Button
+    Image: 'gui/button/button2_off.png'
+    HoverImage: 'gui/button/button2_on.png'
+    ClickImage: 'gui/button/button2_on.png'
+    Width: 60
+    Height: 15
+    Text: '回報錯誤'
+    TextColor: 'fa8072'
+    TextSize: 1
+    ToGUI: 'System_ReportError'
+    Close: false
+    Position: 1
+    X: 0
+    Y: 90
+  #選項
+  Button6:
+    Type: Button
+    Image: 'gui/button/button2_off.png'
+    HoverImage: 'gui/button/button2_on.png'
+    ClickImage: 'gui/button/button2_on.png'
+    Width: 60
+    Height: 15
+    Text: '選項'
+    TextColor: 'fff8dc'
+    TextSize: 1
+    ToGUI: 'System_Options'
+    Close: false
+    Position: 1
+    X: 20
+    Y: 110
+  #中斷連線
+  Button8:
+    Type: Button
+    Image: 'gui/button/button2_off.png'
+    HoverImage: 'gui/button/button2_on.png'
+    ClickImage: 'gui/button/button2_on.png'
+    Width: 60
+    Height: 15
+    Text: '中斷連線'
+    TextColor: 'afeeee'
+    TextSize: 1
+    ToGUI: 'System_ServerMenu'
+    Close: false
+    Position: 1
+    X: 0
+    Y: 130
+  #容器
+  Container11:
+    Type: Container
+    BackgroundImage: ''
+    Width: 150
+    Height: 155
+    BackgroundColor: '778899'
+    Position: 3
+    X: 0
+    Y: 0
+    ContentList:
+      Announcement:
+        Type: 'Text'
+        Text:
+        - '自訂公告1'
+        - '自訂公告2'
+        - '自訂公告3'
+        TextSize: '1'
+        TextColor: '000000'
+        Position: 1
+        X: 0
+        Y: 0

@@ -1,0 +1,211 @@
+Gui:
+  Type: Inventory
+  Position: '5'
+  X: '0'
+  Y: '0'
+  Width: '500'
+  Height: '500'
+  Image: gui/background/background_2.png
+  Color: ffffff
+  Transparent: '255'
+  Mask: 'true'
+ContentList:
+  SelectExample:
+    Type: Select
+    Position: 5
+    X: -100
+    Y: -150
+    Width: 80
+    Height: 20
+    CornerRadius: 10
+    Image: 'gui/button/button_default.png'
+    Color: 'ffffff'
+    Transparent: 255
+    TextSize: 1
+    TextColor: 'bdb76b'
+    Option:
+      Width: 60
+      Height: 20
+      Image: '' #
+      Color: '808080'
+      Transparent: 255
+      HoverColor: 'b0e0e6'
+      HoverTransparent: 255
+      TextColor: '000000'
+      TextHoverColor: '808000'
+      TextSize: 1
+      Direction: 1
+      Choose: '選擇想要的時段'
+      List:
+        - 日出
+        - 早上
+        - 中午
+        - 日落
+        - 晚上
+        - 午夜
+  AreaInputExample:
+    Type: AreaInput
+    Position: 5
+    X: -100
+    Y: -60
+    Image: ''
+    Color: 'e6e6fa'
+    Width: 80
+    Height: 100
+    Text:
+      -  '第一行111'
+      -  '第二行111'
+      -  '第三行111'
+    TextColor: '00CACA'
+    TextSize: 1
+    TextMaxLength: 200
+    InputStart: 1
+    InputEnd: -1
+    CanInput: true
+  InputExample:
+    Type: Input
+    Position: 5
+    X: -100
+    Y: 0
+    Width: 80
+    Height: 18
+    Image: 'gui/input/input_3.png'
+    Color: 'FFFFFF'
+    Transparent: 200
+    Title: '密码: '
+    TitleColor: '577700'
+    TitleSize: 1
+    Prompt: '请输入密码-非容器输入框'
+    PromptColor: 'daa520'
+    PromptSize: 1
+    Text: ''
+    TextColor: '00CACA'
+    TextSize: 1
+    TextMaxLength: 50
+    InputStart: 3
+    InputEnd: 0
+    CanInput: true
+  #常规指令
+  Button:
+    Type: Button
+    Position: 5
+    X: '-130'
+    Y: '20'
+    Color: '#9932CC'
+    HoverColor: '#9932CC'
+    Transparent: 255
+    HoverTransparent: 155
+    ClickTransparent: 155
+    Width: 50
+    Height: 20
+    Text: "点击登入"
+    TextColor: "000000"
+    #<>内的是guipro内置占位符解析 Input代表输入框  InputExample代表组件id 最后一个默认值是当获取回来的内容为空时将返回默认值
+    #注意 如果你的输入框组件在容器内 则写法为<Input.容器id-输入框id.默认值> 或者<Input.容器id-容器id-输入框id.默认值>
+    #意思就是 结尾必须是输入框id
+    #目前该占位符支持全部动作下解析
+    #现有占位符 <Input.组件id.默认值>输入框捕获    <AreaInput.组件id.行数.默认值>多行输入框捕获
+    #<Select.组件id.默认值>选项捕获  <Range.组件id.默认值>范围选择器捕获
+    Event:
+      #左键点击时 这个只有按钮有
+      LeftClick:
+        condition1:
+          condition: ""
+          action:
+            - "[tell]: 这是<Input.InputExample.非容器内输入框默认>内容 | 这是<AreaInput.AreaInputExample.1.列表默认>内容" #输入框解析支持默认值
+        condition2:
+          condition: "'<Select.SelectExample.null>' == '早上' && '%player_name%' == '%player_name%'" #条件内也支持解析
+          action:
+            - "[tell]: 因为你选择了早上 并且papi解析你的名字=你的名字 所以可以看见这条信息"
+
+  #容器组件
+  ContainerExample:
+    Type: Container
+    Position: 5
+    X: 50
+    Y: 0
+    Width: '200'
+    Height: '300'
+    ActualWidth: "200"
+    ActualHeight: "300"
+    Image: gui/background/background_2.png
+    Color: FFFFFF
+    Transparent: 100
+    ScrollX: 50
+    ScrollY: 50
+    OverflowX: 1
+    OverflowY: 1
+    ScrollXDisplay: 2
+    ScrollYDisplay: 2
+    ContentList:
+      AreaInputExample:
+        Type: AreaInput
+        Position: 5
+        X: 30
+        Y: -60
+        Image: ''
+        Color: 'e6e6fa'
+        Width: 80
+        Height: 100
+        Text:
+          -  '第一行222'
+          -  '第二行222'
+          -  '第三行222'
+        TextColor: '00CACA'
+        TextSize: 1
+        TextMaxLength: 200
+        InputStart: 1
+        InputEnd: -1
+        CanInput: true
+      InputExample:
+        Type: Input
+        Position: 5
+        X: 30
+        Y: 0
+        Width: 100
+        Height: 18
+        Image: 'gui/input/input_3.png'
+        Color: 'FFFFFF'
+        Transparent: 200
+        Title: '密码: '
+        TitleColor: '577700'
+        TitleSize: 1
+        Prompt: '请输入密码-容器输入框'
+        PromptColor: 'daa520'
+        PromptSize: 1
+        Text: ''
+        TextColor: '00CACA'
+        TextSize: 1
+        TextMaxLength: 50
+        InputStart: 3
+        InputEnd: 0
+        CanInput: true
+      #常规指令
+      Button:
+        Type: Button
+        Position: 5
+        X: '0'
+        Y: '20'
+        Color: '#9932CC'
+        HoverColor: '#9932CC'
+        Transparent: 255
+        HoverTransparent: 155
+        ClickTransparent: 155
+        Width: 50
+        Height: 20
+        Text: "点击登入"
+        TextColor: "000000"
+        #<>内的是guipro内置占位符解析 Input代表输入框  InputExample代表组件id 最后一个默认值是当获取回来的内容为空时将返回默认值
+        #注意 如果你的输入框组件在容器内 则写法为<Input.容器id-输入框id.默认值> 或者<Input.容器id-容器id-输入框id.默认值>
+        #意思就是 结尾必须是输入框id
+        #目前该占位符支持全部动作下解析
+        #现有占位符 <Input.组件id.默认值>输入框捕获    <AreaInput.组件id.行数.默认值>多行输入框捕获
+        #<Select.组件id.默认值>选项捕获  <Range.组件id.默认值>范围选择器捕获
+        Event:
+          #左键点击时 这个只有按钮有
+          LeftClick:
+            condition1:
+              condition: ""
+              action:
+                - "[tell]: 这是<Input.ContainerExample-InputExample.容器内输入框默认>内容 | 这是<AreaInput.ContainerExample-AreaInputExample.2.容器列表默认>内容" #输入框解析支持默认值
+

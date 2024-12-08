@@ -1,0 +1,9 @@
+Hover_Text_background:
+  Type: Image
+  Position: 0
+  X: '{display_mouse_x}'
+  Y: '{display_mouse_y}'
+  Color: '0x000000'
+  Transparent: 100
+  Width: 40
+  Height: 40

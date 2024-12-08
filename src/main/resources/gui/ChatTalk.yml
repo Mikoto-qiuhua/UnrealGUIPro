@@ -1,0 +1,105 @@
+Gui:
+  Type: Inventory
+  Position: 5
+  X: 0
+  Y: 0
+  Width: 320
+  Height: 200
+  Tooltip: example
+  Transparent: 255
+  Color: ffffff
+  Image: gui/background/background_2.png
+
+ContentList:
+
+  ButtonDefaultChannel:
+    Type: Button
+    Position: 7
+    X: 10
+    Y: -25
+    Color: '#FFFFFF'
+    HoverColor: '#1e90ff'
+    ClickColor: '#1e90ff'
+    Transparent: 255
+    Width: 40
+    Height: 10
+    Text: 'Default'
+    TextColor: 00CACA
+    TextSize: 1
+    ToGUI: 'ChatDefault'
+
+  ButtonDefaultTalk:
+    Type: Button
+    Position: 7
+    X: 50
+    Y: -25
+    Color: '#1e90ff'
+    HoverColor: '#1e90ff'
+    ClickColor: '#1e90ff'
+    Transparent: 255
+    Width: 25
+    Height: 10
+    Text: 'Talk'
+    TextColor: 00CACA
+    TextSize: 1
+
+  ButtonExample:
+    Type: Button
+    Position: 3
+    X: -10
+    Y: 10
+    Image: gui/button/button2_off.png
+    HoverImage: gui/button/button2_on.png
+    ClickImage: gui/button/button2_on.png
+    Color: 1e90ff
+    Transparent: 255
+    Width: '{display_ButtonExample_text_w}+4'
+    Height: 14
+    Text: 'ToBackpack'
+    TextColor: 00CACA
+    TextSize: 1
+    ToGUI: 'ChatDefaultExample'
+
+  ButtonExit:
+    Type: Button
+    Position: 3
+    X: -3
+    Y: 3
+    Image: 'gui/icon/x.png'
+    Color: '#FFFFFF'
+    HoverColor: '#1e90ff'
+    ClickColor: '#1e90ff'
+    Transparent: 255
+    Width: 6
+    Height: 6
+    TextColor: '#00CACA'
+    TextSize: 1
+    Close: true
+
+  ChatDisplayExample:
+    Type: ChatDisplay
+    Position: 2
+    X: 0
+    Y: 10
+    Width: 300
+    Height: 150  #160
+    Image: ''
+    Color: '#4F4F4F'
+    Transparent: 255
+    Channel: 'Talk'
+
+  InputExample:
+    Type: ChatInput
+    Position: 8
+    X: 0
+    Y: -10
+    Width: 300
+    Height: 15
+    Image: ''
+    Color: '#4F4F4F'
+    Transparent: 150
+    Text: ''
+    InputStart: 3
+    InputEnd: -1
+    Input: true
+    Channel: 'Talk'

@@ -1,0 +1,64 @@
+#界面事件
+Event:
+#当打开这个gui时会触发的功能 这里只设置了播放视频
+# Task:
+#   播放视频:
+#     #任务类型 Loop是循环  Once 是一次性
+#     Type: Once
+#     #时间 循环的话就是循环间隔  一次性就是延迟执行的时间 这里的单位是tick 20=1秒
+#     Time: 10
+#     Action:
+#       action:                         #可选动作 播放 暂停 结束
+#         - "[video]: VideoExample,播放" #这里的参数是组件的id 格式和占位符类似 如果你的组件在容器内 那就是  容器-视频组件 或者 容器-容器-视频组件
+#       ktAction:
+Gui:
+  Type: Inventory
+  Position: '5'
+  X: '0'
+  Y: '0'
+  Width: '500'
+  Height: '500'
+  Image: gui/background/background_2.png
+  Color: ffffff
+  Transparent: '255'
+  Mask: 'true'
+ContentList:
+  播放按钮:
+    Type: Button
+    Position: 5
+    X: 0
+    Y: 200
+    Color: '1e90ff'
+    HoverColor: '1e90ff'
+    ClickColor: '1e90ff'
+    Width: "200"
+    Height: "20"
+    HoverTransparent: "155"
+    ClickTransparent: "155"
+    Transparent: "255"
+    Text: '播放视频'
+    TextColor: 'ece5d8'
+    TextSize: 1
+    Event:
+      #左键点击时 这个只有按钮有
+      LeftClick:
+        condition1:
+          condition: ""
+          action:
+            - "[video]: VideoExample,播放"
+      #右键
+      RightClick:
+        condition1:
+          condition: ""
+          action:
+            - "[video]: VideoExample,暂停"
+  #这个组件是不会自动播放的 你需要使用上面的界面事件来播放
+  VideoExample:
+    Type: Video
+    Position: 5
+    X: 0
+    Y: 0
+    Width: 256
+    Height: 144
+    VideoPlayer: VideoExample #这里是播放的视频key 每个播放组件不能一样  播放动作填的是组件的名字 不是这里的key
+    Url: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" #播放视频的链接

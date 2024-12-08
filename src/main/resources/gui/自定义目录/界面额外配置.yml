@@ -1,0 +1,87 @@
+#界面独立参数  以下参数均可不填
+Options:
+  #按钮的点击间隔 单位是毫秒  默认值是100
+  ButtonClickInterval: 100
+  #界面papi的刷新间隔 如果设置成0或不填 则不会创建更新的线程 可以减少不必要的开销  默认值是0
+  #这里的间隔单位是tick 20tick=1秒
+  Refresh: 20
+#界面事件
+Event:
+  #当打开这个gui时会触发的功能 均可不填
+  OpenAction:
+    addGui:
+      #gui合集名称:
+        #gui列表
+    action:
+      #    - "[console]: 控制台执行"
+      #    - "[op]: 玩家op身份执行"
+      #    - "[tell]: 给玩家发送消息"
+      #    - "[player]: 玩家身份执行"
+      #    - "[chat]: 玩家聊天栏执行"
+      #    - "[effects]: 粒子类型,粒子数量,粒子速度,x,y,z"
+      #    - "[sound]: 音效类型,p,v"
+      #    - "[transitionValue]: 变量id,开始值,结束值,开始到结束的"
+      #    - "[transitionValueRemove]: 变量id,变量id 可以填写多个 ,分割"
+      #    - "[toGui]: 跳转的gui名字"
+      #    - "[close]: 关闭界面,关闭界面 如果填self 效果就和esc一样 关闭当前界面 可以填写多个 ,分割     如果填临时组件的列表id  那他就会移除这个列表内的全部组件"
+      #    - "[openUrl]: 为玩家打开一个网页链接"
+      - "[sound]: ENTITY_EXPERIENCE_ORB_PICKUP,1,1"
+      - "[transitionValue]: 动画1,0,200,400"
+      - "[transitionValue]: 动画2,1,1,1"
+      - "[tell]: 你打开了一个界面"
+  CloseAction:
+    action:
+      - "[sound]: ENTITY_EXPERIENCE_ORB_PICKUP,1,1"
+      - "[tell]: 你关闭了一个界面"
+  Task:
+    任务1:
+      #任务类型 Loop是循环  Once 是一次性 定时任务 支持循环和延迟执行
+      Type: Loop
+      #时间 循环的话就是循环间隔  一次性就是延迟执行的时间 这里的单位是tick 20=1秒
+      Time: 60
+      Action:
+        action:
+          - "[tell]: 这是打开界面时每隔3秒的循环消息"
+        ktAction:
+    任务2:
+      #任务类型 Loop是循环  Once 是一次性
+      Type: Once
+      #时间 循环的话就是循环间隔  一次性就是延迟执行的时间 这里的单位是tick 20=1秒
+      Time: 40
+      Action:
+        action:
+          - "[tell]: 这是打开界面时延迟了2秒的消息"
+          - "[transitionValue]: 动画2,1,255,200"
+        ktAction:
+
+
+
+
+Gui:
+  Type: Inventory
+  Position: '5'
+  X: '{transition_动画1}'
+  Y: '0'
+  Width: '250'
+  Height: '180'
+  Image: gui/background/background_2.png
+  Color: ffffff
+  Transparent: '255'
+  Mask: 'true'
+ContentList:
+  延迟按钮:
+    Type: Button
+    Position: 5
+    X: 0
+    Y: 0
+    Color: '1e90ff'
+    HoverColor: '1e90ff'
+    ClickColor: '1e90ff'
+    Width: "200"
+    Height: "20"
+    HoverTransparent: "255"
+    ClickTransparent: "255"
+    Transparent: "{transition_动画2}+0"
+    Text: '延迟按钮'
+    TextColor: 'ece5d8'
+    TextSize: 1

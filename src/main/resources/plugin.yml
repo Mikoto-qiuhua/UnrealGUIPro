@@ -1,0 +1,14 @@
+name: UnrealGUIPro
+main: org.qiuhua.UnrealGUIPro.Main
+version: 2.1.0
+api-version: 1.13
+commands:
+  UnrealGUIPro:
+    description: "主指令"
+    usage: /<command>
+    aliases: [ ugp ]
+depend:
+  - UnrealCore
+  - PlaceholderAPI
+softdepend:
+  - TrMenu

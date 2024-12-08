@@ -1,0 +1,341 @@
+Gui:
+  Type: Inventory
+  Position: '5'
+  X: '0'
+  Y: '0'
+  Width: '250'
+  Height: '180'
+  Image: gui/background/background_2.png
+  Color: ffffff
+  Transparent: '255'
+  Mask: 'true'
+  Tooltip: ''
+ContentList:
+  Backpack_List:
+    Type: Container
+    Position: '7'
+    X: '5'
+    Y: '-5'
+    Width: '80'
+    Height: '140'
+    ActualWidth: '80'
+    ActualHeight: '200'
+    Image: gui/background/background_2.png
+    Color: '#ffffff'
+    Transparent: '0'
+    ScrollBackgroundColor: '000000'
+    ScrollBackgroundTransparent: '255'
+    ScrollColor: 8B8B7A
+    ScrollTransparent: '100'
+    ScrollSidebarColor: 8B8B7A
+    ScrollSidebarTransparent: '255'
+    ScrollX: '0'
+    ScrollY: '0'
+    OverflowXHide: 'true'
+    OverflowYHide: 'true'
+    ScrollXDisplay: '1'
+    ScrollYDisplay: '1'
+    Use: 'true'
+    ContentList:
+      Slot9:
+        Type: Slot
+        Position: '1'
+        X: '1'
+        Y: '2'
+        Width: '18'
+        Height: '18'
+        Image: gui/slot/slot.png
+        Color: '0xffffff'
+        Transparent: '255'
+        HoverMargin: '1'
+        HoverColor: '0xffffff'
+        HoverTransparent: '100'
+        Slot: '9'
+        ItemSize: '1'
+        Use: 'false'
+      Slot10:
+        Type: Slot
+        Position: '1'
+        X: '21'
+        Y: '2'
+        Width: '18'
+        Height: '18'
+        Image: gui/slot/slot.png
+        Color: '0xffffff'
+        Transparent: '255'
+        HoverMargin: '1'
+        HoverColor: '0xffffff'
+        HoverTransparent: '100'
+        Slot: '10'
+        ItemSize: '1'
+        Use: 'false'
+      Slot11:
+        Type: Slot
+        Position: '1'
+        X: '41'
+        Y: '2'
+        Width: '18'
+        Height: '18'
+        Image: gui/slot/slot.png
+        Color: '0xffffff'
+        Transparent: '255'
+        HoverMargin: '1'
+        HoverColor: '0xffffff'
+        HoverTransparent: '100'
+        Slot: '11'
+        ItemSize: '1'
+        Use: 'false'
+      Slot12:
+        Type: Slot
+        Position: '1'
+        X: '61'
+        Y: '2'
+        Width: '18'
+        Height: '18'
+        Image: gui/slot/slot.png
+        Color: '0xffffff'
+        Transparent: '255'
+        HoverMargin: '1'
+        HoverColor: '0xffffff'
+        HoverTransparent: '100'
+        Slot: '12'
+        ItemSize: '1'
+        Use: 'false'
+  Container_1:
+    Type: Container
+    Position: '9'
+    X: '-6'
+    Y: '-6'
+    Width: '155'
+    Height: '140'
+    ActualWidth: '155'
+    ActualHeight: '80'
+    Image: gui/container/container_1.png
+    Color: '#ffffff'
+    Transparent: '255'
+    ScrollBackgroundColor: '#c0c0c0'
+    ScrollBackgroundTransparent: '255'
+    ScrollColor: '#c0c0c0'
+    ScrollTransparent: '255'
+    ScrollSidebarColor: '#c0c0c0'
+    ScrollSidebarTransparent: '100'
+    ScrollX: '0'
+    ScrollY: '0'
+    OverflowXHide: 'true'
+    OverflowYHide: 'true'
+    ScrollXDisplay: '1'
+    ScrollYDisplay: '1'
+    Use: 'true'
+    ContentList:
+      Container_0:
+        Type: Container
+        Position: '1'
+        X: '6'
+        Y: '5'
+        Width: '70'
+        Height: '50'
+        ActualWidth: '73'
+        ActualHeight: '50'
+        Image: gui/container/container_1.png
+        Color: '#ffffff'
+        Transparent: '255'
+        ScrollBackgroundColor: '#c0c0c0'
+        ScrollBackgroundTransparent: '255'
+        ScrollColor: '#c0c0c0'
+        ScrollTransparent: '255'
+        ScrollSidebarColor: '#c0c0c0'
+        ScrollSidebarTransparent: '100'
+        ScrollX: '0'
+        ScrollY: '0'
+        OverflowXHide: 'true'
+        OverflowYHide: 'true'
+        ScrollXDisplay: '1'
+        ScrollYDisplay: '1'
+        Use: 'true'
+        ContentList:
+          Image_0:
+            Type: Image
+            Position: '4'
+            X: '3'
+            Y: '0'
+            Width: '20'
+            Height: '20'
+            Image: item/scute/100.png
+            Color: '#FFFFFF'
+            Transparent: '255'
+          Text_1:
+            Type: Text
+            Position: '4'
+            X: '27'
+            Y: '-8'
+            Text:
+            - 狐狸尾巴
+            TextColor: '#FFFFFF'
+            TextSize: '1'
+            Space: '10'
+          Text_2:
+            Type: Text
+            Position: '1'
+            X: '28'
+            Y: '30'
+            Text:
+            - 單價
+            TextColor: '#FFFFFF'
+            TextSize: '0.8'
+            Space: '10'
+          Image_3:
+            Type: Image
+            Position: '1'
+            X: '45'
+            Y: '29'
+            Width: '10'
+            Height: 10'
+            Image: gui/icon/i1.png
+            Color: '#FFFFFF'
+            Transparent: '255'
+          Text_4:
+            Type: Text
+            Position: '1'
+            X: '56'
+            Y: '30'
+            Text:
+            - '223'
+            TextColor: '#FFFFFF'
+            TextSize: '0.8'
+            Space: '10'
+      Container_1:
+        Type: Container
+        Position: '3'
+        X: '-5'
+        Y: '5'
+        Width: '70'
+        Height: '50'
+        ActualWidth: '73'
+        ActualHeight: '50'
+        Image: gui/container/container_1.png
+        Color: '#ffffff'
+        Transparent: '255'
+        ScrollBackgroundColor: '#c0c0c0'
+        ScrollBackgroundTransparent: '255'
+        ScrollColor: '#c0c0c0'
+        ScrollTransparent: '255'
+        ScrollSidebarColor: '#c0c0c0'
+        ScrollSidebarTransparent: '100'
+        ScrollX: '0'
+        ScrollY: '0'
+        OverflowXHide: 'true'
+        OverflowYHide: 'true'
+        ScrollXDisplay: '1'
+        ScrollYDisplay: '1'
+        Use: 'true'
+        ContentList:
+          Image_0:
+            Type: Image
+            Position: '4'
+            X: '7'
+            Y: '0'
+            Width: '20'
+            Height: '20'
+            Image: item/scute/101.png
+            Color: '#FFFFFF'
+            Transparent: '255'
+          Text_1:
+            Type: Text
+            Position: '4'
+            X: '32'
+            Y: '-8'
+            Text:
+            - 狐狸尾巴
+            TextColor: '#FFFFFF'
+            TextSize: '1'
+            Space: '10'
+          Text_2:
+            Type: Text
+            Position: '1'
+            X: '30'
+            Y: '30'
+            Text:
+            - 單價
+            TextColor: '#FFFFFF'
+            TextSize: '0.8'
+            Space: '10'
+          Image_3:
+            Type: Image
+            Position: '1'
+            X: '47'
+            Y: '29'
+            Width: '10'
+            Height: 10'
+            Image: gui/icon/i1.png
+            Color: '#FFFFFF'
+            Transparent: '255'
+          Text_4:
+            Type: Text
+            Position: '1'
+            X: '57'
+            Y: '30'
+            Text:
+            - '223'
+            TextColor: '#FFFFFF'
+            TextSize: '0.8'
+            Space: '10'
+  Button_2:
+    Type: Button
+    Position: '1'
+    X: '8'
+    Y: '8'
+    Width: '47'
+    Height: '19'
+    Image: gui/button/button_default.png
+    Color: '#FFFFFF'
+    Transparent: '255'
+    HoverImage: gui/button/button_hover.png
+    HoverColor: '#FFFFFF'
+    HoverTransparent: '255'
+    ClickImage: gui/button/button_hover.png
+    ClickColor: '#FFFFFF'
+    ClickTransparent: '255'
+    Text: 購買
+    TextColor: '#FFFFFF'
+    TextSize: '1'
+    Use: 'true'
+  Button_3:
+    Type: Button
+    Position: '1'
+    X: '59'
+    Y: '8'
+    Width: '47'
+    Height: '19'
+    Image: gui/button/button_default.png
+    Color: '#FFFFFF'
+    Transparent: '255'
+    HoverImage: gui/button/button_hover.png
+    HoverColor: '#FFFFFF'
+    HoverTransparent: '255'
+    ClickImage: gui/button/button_hover.png
+    ClickColor: '#FFFFFF'
+    ClickTransparent: '255'
+    Text: 出售
+    TextColor: '#FFFFFF'
+    TextSize: '1'
+    Use: 'true'
+  Button_4:
+    Type: Button
+    Position: '1'
+    X: '110'
+    Y: '8'
+    Width: '47'
+    Height: '19'
+    Image: gui/button/button_default.png
+    Color: '#FFFFFF'
+    Transparent: '255'
+    HoverImage: gui/button/button_hover.png
+    HoverColor: '#FFFFFF'
+    HoverTransparent: '255'
+    ClickImage: gui/button/button_hover.png
+    ClickColor: '#FFFFFF'
+    ClickTransparent: '255'
+    Text: 交易紀錄
+    TextColor: '#FFFFFF'
+    TextSize: '1'
+    Use: 'true'

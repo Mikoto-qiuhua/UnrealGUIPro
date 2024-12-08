@@ -1,0 +1,307 @@
+
+# 1. 等于（==）：指两个值字面意思上相同。
+# 2. 不等于（!=）：指两个值字面意思上不同。
+# 5. 大于（>）：指第一个值大于第二个值。
+# 6. 大于等于（>=）：指第一个值大于或等于第二个值。
+# 7. 小于（<）：指第一个值小于第二个值。
+# 8. 小于等于（<=）：指第一个值小于或等于第二个值。
+# 字符串要使用 '' 包裹才能进行判断  数字则不需要
+# 例如 "'%player_name%' == '打开者的名字'"
+#界面独立参数  以下参数均可不填
+Options:
+  #按钮的点击间隔 单位是毫秒  默认值是100
+  ButtonClickInterval: 100
+  #界面papi的刷新间隔 如果设置成0或不填 则不会创建更新的线程 可以减少不必要的开销  默认值是0
+  #这里的间隔单位是tick 20tick=1秒
+  Refresh: 20
+Event:
+  #当打开这个gui时会触发的功能 均可不填
+  OpenAction:
+    action:
+      #    - "[console]: 控制台执行"
+      #    - "[op]: 玩家op身份执行"
+      #    - "[tell]: 给玩家发送消息"
+      #    - "[player]: 玩家身份执行"
+      #    - "[chat]: 玩家聊天栏执行"
+      #    - "[effects]: 粒子类型,粒子数量,粒子速度,x,y,z"
+      #    - "[sound]: 音效类型,p,v"
+      #    - "[transitionValue]: 变量id,开始值,结束值,开始到结束的"
+      #    - "[toGui]: 跳转的gui名字"
+      #    - "[close]: 关闭界面 如果填self 效果就和esc一样 关闭当前界面   如果填临时组件的列表id 那他就会移除这个列表内的全部组件 并且立即刷新一次页面（你在哪个组件上设置了这个临时组件 那他的列表id就是那个组件的名称）"
+      #    - "[openUrl]: 为玩家打开一个网页链接"
+      #    - "[video]: VideoExample,播放 暂停 结束 三选一" #这里的参数是组件的id 格式和占位符类似 如果你的组件在容器内 那就是  容器-视频组件 或者 容器-容器-视频组件
+      #    - "[slotClick]: 0"  填槽位id
+      - "[tell]: 你打开了一个界面"
+      - "[transitionValue]: ButtonExample动画1-缩放,0,0,1"
+      - "[transitionValue]: ButtonExample动画2-缩放,0,0,1"
+      - "[transitionValue]: ButtonExample动画1-向下位移,0,0,1"
+
+      - "[transitionValue]: ButtonExample动画1-缩放,0,0,1"
+      - "[transitionValue]: ButtonExample动画2-缩放,0,0,1"
+      - "[transitionValue]: ButtonExample动画1-向上位移,0,0,1"
+    #这个需要装KetherFactory扩展才有效 如果装了的话 全部条件的地方均为Kether语句
+    ktAction: |
+      print "World!"
+      player gamemode to SPECTATOR
+      tell "以为你修改游戏模式"
+    addGui:
+      列表id:
+        #组件内容
+  CloseAction:
+    action:
+      - "[tell]: 你关闭了一个界面"
+Gui:
+  Type: Inventory
+  Position: '5'
+  X: '0'
+  Y: '0'
+  Width: '1000'
+  Height: '1000'
+  Image: gui/background/background_2.png
+  Color: ffffff
+  Transparent: '0'
+  Mask: 'true'
+ContentList:
+  #组件条件 支持条件显示 在打开的时候判断一次
+  text:
+    # Condition: "'%player_name%' == '名字' &&  1 != 2"
+    Type: "Text"
+    Position: 5
+    X: '0'
+    Y: '0'
+    Text:
+      - '你看得见这个文本'
+    TextSize: '2'
+    Space: 18
+    TextColor: "ece5d8"
+  #组件功能 点击事件仅限按钮使用 选中事件全部组件均可使用
+  ButtonExample:
+    Type: Button
+    Position: 5
+    X: 0
+    Y: "30-{transition_ButtonExample0动画1-向上位移}"
+    Color: '1e90ff'
+    HoverColor: '1e90ff'
+    ClickColor: '1e90ff'
+    Width: "200+{transition_ButtonExample动画1-缩放}"
+    Height: "20+{transition_ButtonExample动画2-缩放}"
+    HoverTransparent: "255"
+    ClickTransparent: "255"
+    Transparent: "255"
+    Text: '会让位置的按钮 点击显示临时组件1'
+    TextColor: 'ece5d8'
+    TextSize: 1
+    Event:
+      #左键点击时 这个只有按钮有
+      LeftClick:
+        condition1:
+          condition: ""
+          #延迟任务 单位是tick
+          delay: 10
+          action:
+            - "[tell]: 你左键点击了按钮 显示一个额外页面"
+          #左键点击额外的组件显示
+          addGui:
+            #这里的名字不能和其他地方的重复
+            额外添加的临时组件背景1:
+              Type: Image
+              Position: 5
+              X: 0
+              Y: -30
+              Width: 200
+              Height: 20
+              Image: ''
+              Color: 'ffffff'
+              Transparent: 255
+            额外添加的临时组件1:
+              Type: "Text"
+              Position: 5
+              X: '0'
+              Y: '-30'
+              Text:
+                - '额外添加的临时组件1'
+              TextSize: '2'
+              Space: 18
+              TextColor: "000000"
+            额外添加的临时关闭按钮1:
+              Type: Button
+              Position: 5
+              X: 200
+              Y: -30
+              Color: '1e90ff'
+              HoverColor: '1e90ff'
+              ClickColor: '1e90ff'
+              Width: "100"
+              Height: "20"
+              HoverTransparent: "100"
+              ClickTransparent: "100"
+              Transparent: "255"
+              Text: '点我关闭临时组件1'
+              TextColor: 'ece5d8'
+              TextSize: 1
+              Event:
+                #左键点击时 这个只有按钮有
+                LeftClick:
+                  condition1:
+                    condition: ""
+                    action:
+                      #内置单独关闭按钮
+                      - "[close]: ButtonExample"
+      RightClick:
+        condition1:
+          condition: "1 == 1"
+          action:
+            - "[tell]: 1等于1"
+          ktAction:
+        condition2:
+          condition: "1 == 2"
+          action:
+            - "[tell]: 1不等于2"
+          ktAction:
+      #当鼠标选中这个组件时
+      Select:
+        action:
+          - "[sound]: BLOCK_STONE_BUTTON_CLICK_OFF,1,2"
+          - "[transitionValue]: ButtonExample动画1-缩放,0,10,100"
+          - "[transitionValue]: ButtonExample动画2-缩放,0,5,100"
+          - "[transitionValue]: ButtonExample动画1-向下位移,0,10,100"
+        ktAction:
+
+      #当鼠标离开这个组件时
+      Leave:
+        action:
+          - "[sound]: BLOCK_STONE_BUTTON_CLICK_OFF,1,2"
+          - "[transitionValue]: ButtonExample动画1-缩放,10,0,100"
+          - "[transitionValue]: ButtonExample动画2-缩放,5,0,100"
+          - "[transitionValue]: ButtonExample动画1-向下位移,10,0,100"
+        ktAction:
+
+  ButtonExample0:
+    Type: Button
+    Position: 5
+    X: 0
+    Y: "55+{transition_ButtonExample动画1-向下位移}"
+    Color: '1e90ff'
+    HoverColor: '1e90ff'
+    ClickColor: '1e90ff'
+    Width: "200+{transition_ButtonExample0动画1-缩放}"
+    Height: "20+{transition_ButtonExample0动画2-缩放}"
+    HoverTransparent: "255"
+    ClickTransparent: "255"
+    Transparent: "255"
+    Text: '会让位置的按钮 点击显示临时组件2'
+    TextColor: 'ece5d8'
+    TextSize: 1
+    Event:
+      #左键点击时 这个只有按钮有
+      LeftClick:
+        condition1:
+          condition: ""
+          action:
+            - "[tell]: 你左键点击了按钮 显示一个额外页面"
+          #允许同时显示多个
+          addGui:
+            #这里的名字不能和其他地方的重复
+            额外添加的临时组件背景2:
+              Type: Image
+              Position: 5
+              X: 0
+              Y: -60
+              Width: 350
+              Height: 20
+              Image: ''
+              Color: 'ffffff'
+              Transparent: 255
+            额外添加的临时组件2:
+              Type: "Text"
+              Position: 5
+              X: '0'
+              Y: '-60'
+              Text:
+                - '额外添加的临时组件2%player_name%' #支持papi解析
+              TextSize: '2'
+              Space: 18
+              TextColor: "000000"
+            额外添加的临时关闭按钮2:
+              Type: Button
+              Position: 5
+              X: 300
+              Y: -60
+              Color: '1e90ff'
+              HoverColor: '1e90ff'
+              ClickColor: '1e90ff'
+              Width: "100"
+              Height: "20"
+              HoverTransparent: "100"
+              ClickTransparent: "100"
+              Transparent: "255"
+              Text: '点我关闭临时组件2'
+              TextColor: 'ece5d8'
+              TextSize: 1
+              Event:
+                #左键点击时 这个只有按钮有
+                LeftClick:
+                  condition1:
+                    condition: ""
+                    action:
+                      #支持配置关闭指定临时组件
+                      - "[close]: ButtonExample0"
+      #当鼠标选中这个组件时
+      Select:
+        action:
+          - "[sound]: BLOCK_STONE_BUTTON_CLICK_OFF,1,2"
+          - "[transitionValue]: ButtonExample0动画1-缩放,0,10,100"
+          - "[transitionValue]: ButtonExample0动画2-缩放,0,5,100"
+          - "[transitionValue]: ButtonExample0动画1-向上位移,0,10,100"
+      #当鼠标离开这个组件时
+      Leave:
+        action:
+          - "[sound]: BLOCK_STONE_BUTTON_CLICK_OFF,1,2"
+          - "[transitionValue]: ButtonExample0动画1-缩放,10,0,100"
+          - "[transitionValue]: ButtonExample0动画2-缩放,5,0,100"
+          - "[transitionValue]: ButtonExample0动画1-向上位移,10,0,100"
+
+  客户端tip:
+    #这个tip为客户端控制显示的
+    Tip: 'text'
+    Type: "Text"
+    Position: 5
+    X: '0'
+    Y: '100'
+    Text:
+      - '会显示tip的文本'
+    TextSize: '2'
+    Space: 18
+    TextColor: "ece5d8"
+
+  临时tip:
+    Type: "Text"
+    Position: 5
+    X: '0'
+    Y: '130'
+    Text:
+      - '会显示tip的文本'
+    TextSize: '2'
+    Space: 18
+    TextColor: "ece5d8"
+    Event:
+      #当鼠标选中这个组件时
+      Select:
+        #鼠标放到这个组件上时显示的tip 即时定义tip
+        tip:
+          #使用的tip名称
+          name: "text"
+          #即时定义tip组件  会添加到上面的tip内
+          add:
+            Hover_Text_Text:
+              Type: 'Text'
+              Position: 0
+              X: '{display_mouse_x}+10'
+              Y: '{display_mouse_y}+5'
+              Text:
+                - '22222'
+                - "组件内部tip222"
+                - "333333"
+              TextSize: 1.2
+              Space: 18
+              TextColor: '0xFFFFFF'

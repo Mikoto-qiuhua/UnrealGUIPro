@@ -1,0 +1,790 @@
+Gui:
+  #要使用的工具提示
+  Tooltip: example
+  #GUI類型(Inventory, Chest)
+  Type: 'Inventory'
+  #背景透明度(0~255)
+  Transparent: 128
+  #背景顏色
+  Color: 'ffffff'
+  #GUI圖片
+  Image: '' #- '自訂公告3'
+  #GUI寬度，設-1為根據圖片尺寸。
+  Width: 176
+  #GUI高度，設-1為根據圖片尺寸。
+  Height: 166
+  Position: 5
+  #GUI的X偏移
+  X: 0
+  #GUI的Y偏移
+  Y: 0
+
+#GUI上的物件
+ContentList:
+  #實體
+  #Entity
+  PlayerEntity:
+    Type: Entity
+    EntityType: 'Player'
+    EntityName: 's99889989'
+    EntitySize: 30
+    Position: 1
+    X: 45
+    Y: 10
+
+#合成欄
+#--------------------------#
+  Slot0:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 0
+    ItemSize: 1
+    Position: 1
+    X: 153
+    Y: 27
+
+  Slot1:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 1
+    ItemSize: 1
+    Position: 1
+    X: 97
+    Y: 17
+  Slot2:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 2
+    ItemSize: 1
+    Position: 1
+    X: 115
+    Y: 17
+  Slot3:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 3
+    ItemSize: 1
+    Position: 1
+    X: 97
+    Y: 35
+  Slot4:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 4
+    ItemSize: 1
+    Position: 1
+    X: 115
+    Y: 35
+
+#裝備欄
+#--------------------------#
+  Slot5:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 5
+    ItemSize: 1
+    X: 7
+    Y: 7
+  Slot6:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 6
+    ItemSize: 1
+    X: 7
+    Y: 25
+  Slot7:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 7
+    ItemSize: 1
+    X: 7
+    Y: 43
+  Slot8:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 8
+    ItemSize: 1
+    X: 7
+    Y: 61
+  Slot45:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 45
+    ItemSize: 1
+    X: 76
+    Y: 61
+#第一排
+#--------------------------#
+  Slot9:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 9
+    ItemSize: 1
+    X: 7
+    Y: 83
+  Slot10:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 10
+    ItemSize: 1
+    X: 25
+    Y: 83
+  Slot11:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 11
+    ItemSize: 1
+    X: 43
+    Y: 83
+  Slot12:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 12
+    ItemSize: 1
+    X: 61
+    Y: 83
+  Slot13:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 13
+    ItemSize: 1
+    X: 79
+    Y: 83
+  Slot14:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 14
+    ItemSize: 1
+    X: 97
+    Y: 83
+  Slot15:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 15
+    ItemSize: 1
+    X: 115
+    Y: 83
+  Slot16:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 16
+    ItemSize: 1
+    X: 133
+    Y: 83
+  Slot17:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 17
+    ItemSize: 1
+    X: 151
+    Y: 83
+
+#第二排
+#--------------------------#
+  Slot18:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 18
+    ItemSize: 1
+    X: 7
+    Y: 101
+  Slot19:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 19
+    ItemSize: 1
+    X: 25
+    Y: 101
+  Slot20:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 20
+    ItemSize: 1
+    X: 43
+    Y: 101
+  Slot21:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 21
+    ItemSize: 1
+    X: 61
+    Y: 101
+  Slot22:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 22
+    ItemSize: 1
+    X: 79
+    Y: 101
+  Slot23:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 23
+    ItemSize: 1
+    X: 97
+    Y: 101
+  Slot24:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 24
+    ItemSize: 1
+    X: 115
+    Y: 101
+  Slot25:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 25
+    ItemSize: 1
+    X: 133
+    Y: 101
+  Slot26:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 26
+    ItemSize: 1
+    X: 151
+    Y: 101
+#第三排
+#--------------------------#
+  Slot27:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 27
+    ItemSize: 1
+    X: 7
+    Y: 119
+  Slot28:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 28
+    ItemSize: 1
+    X: 25
+    Y: 119
+  Slot29:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 29
+    ItemSize: 1
+    X: 43
+    Y: 119
+  Slot30:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 30
+    ItemSize: 1
+    X: 61
+    Y: 119
+  Slot31:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 31
+    ItemSize: 1
+    X: 79
+    Y: 119
+  Slot32:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 32
+    ItemSize: 1
+    X: 97
+    Y: 119
+  Slot33:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 33
+    ItemSize: 1
+    X: 115
+    Y: 119
+  Slot34:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 34
+    ItemSize: 1
+    X: 133
+    Y: 119
+  Slot35:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 35
+    ItemSize: 1
+    X: 151
+    Y: 119
+#第四排
+#--------------------------#
+  Slot36:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 36
+    ItemSize: 1
+    X: 7
+    Y: 141
+  Slot37:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 37
+    ItemSize: 1
+    X: 25
+    Y: 141
+  Slot38:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 38
+    ItemSize: 1
+    X: 43
+    Y: 141
+  Slot39:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 39
+    ItemSize: 1
+    X: 61
+    Y: 141
+  Slot40:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 40
+    ItemSize: 1
+    X: 79
+    Y: 141
+  Slot41:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 41
+    ItemSize: 1
+    X: 97
+    Y: 141
+  Slot42:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 42
+    ItemSize: 1
+    X: 115
+    Y: 141
+  Slot43:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 43
+    ItemSize: 1
+    X: 133
+    Y: 141
+  Slot44:
+    Type: Slot
+    Tip: 'item'
+    Image: 'mc/gui/slot.png'
+    Color: '0xffffff'
+    Transparent: 255
+    HoverMargin: 1
+    HoverColor: '0xffffff'
+    HoverTransparent: 100
+    Width: 18
+    Height: 18
+    Custom: false
+    Slot: 44
+    ItemSize: 1
+    X: 151
+    Y: 141

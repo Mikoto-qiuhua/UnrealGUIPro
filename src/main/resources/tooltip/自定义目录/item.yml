@@ -1,0 +1,82 @@
+ItemContainer:
+  Type: Container
+  Position: 0
+  X: 'clamp(({display_mouse_x}+10),0,{display_window_w}-(65+{display_hover_item_name_width}))'
+  Y: 'clamp(({display_mouse_y}-{display_tooltip_h}/2),0,{display_window_h}-(30+{display_hover_item_lore_size}*10))'
+  Width: '65+{display_hover_item_name_width}'
+  Height: '30+{display_hover_item_lore_size}*10'
+  Image: 'gui/container/container_1.png'
+  Color: FFFFFF
+  Transparent: 255
+  ContentList:
+    #物品模型背景
+    item_background:
+      Type: Image
+      Image: 'tooltip/item_background.png'
+      Width: 20
+      Height: 20
+      Position: 1
+      X: 5
+      Y: 5
+    #物品模型背景
+    item_frame:
+      Type: Image
+      Image: 'tooltip/item_frame.gif'
+      Width: 25
+      Height: 25
+      Position: 1
+      X: 2
+      Y: 2
+    #上分隔線
+    line:
+      Type: Image
+      Color: '#272727'
+      Width: '65+{display_hover_item_name_width}'
+      Height: 1
+      Position: 1
+      X: 0
+      Y: 30
+    #物品模型
+    ItemModel:
+      Type: Item
+      Position: 1
+      X: 11
+      Y: 11
+      Item: '{display_hover_item_nbt}'
+      ItemSize: 1 
+      AngleXAdd: 0
+      AngleYAdd: 1
+      AngleZAdd: 0
+    
+    #物品名稱
+    ItemName:
+      Type: 'Text'
+      Position: 1
+      X: 30
+      Y: 10
+      Text:
+      -  '{display_hover_item_name}'
+      TextSize: 1.2
+      Space: 18
+      TextColor: '6821a9'
+
+    #物品Lore
+    ItemLore:
+      Type: 'Text'
+      Position: 2
+      X: 0
+      Y: '35'
+      Text:
+      - '{display_hover_item_lore_1}'
+      - '{display_hover_item_lore_2}'
+      - '{display_hover_item_lore_3}'
+      - '{display_hover_item_lore_4}'
+      - '{display_hover_item_lore_5}'
+      - '{display_hover_item_lore_6}'
+      - '{display_hover_item_lore_7}'
+      - '{display_hover_item_lore_8}'
+      - '{display_hover_item_lore_9}'
+      - '{display_hover_item_lore_10}'
+      TextSize: 1
+      Space: 10
+      TextColor: '6821a9'

@@ -1,0 +1,23 @@
+
+Hover_Text_background:
+  Type: Image
+  Position: 0
+  X: '{display_mouse_x}'
+  Y: '{display_mouse_y}'
+  Color: '0x000000'
+  Transparent: 100
+  Width: 40
+  Height: 40
+  
+
+Hover_Text_Text:
+  Type: 'Text'
+  Position: 0
+  X: '{display_mouse_x}+10'
+  Y: '{display_mouse_y}+5'
+  Text:
+  -  '名稱'
+  -  'Name'
+  TextSize: 1.2
+  Space: 18
+  TextColor: '0xFFFFFF'
